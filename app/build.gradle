@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -22,6 +23,17 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildscript {
+        repositories {
+            google()
+            jcenter()
+        }
+        dependencies {
+            def nav_version = "2.5.0"
+            classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
         }
     }
     compileOptions {
@@ -44,6 +56,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.activity:activity-ktx:1.5.1'
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
 
     implementation "io.coil-kt:coil:1.4.0"
 
