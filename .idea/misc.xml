@@ -11,11 +11,11 @@
         <entry key="..\:/Users/Pckotlin/AndroidStudioProjects/Dogedex/app/src/main/res/drawable/red_circle.xml" value="0.1" />
         <entry key="..\:/Users/Pckotlin/AndroidStudioProjects/Dogedex/app/src/main/res/layout/activity_dog_detail.xml" value="0.1796875" />
         <entry key="..\:/Users/Pckotlin/AndroidStudioProjects/Dogedex/app/src/main/res/layout/activity_dog_list.xml" value="0.1796875" />
-        <entry key="..\:/Users/Pckotlin/AndroidStudioProjects/Dogedex/app/src/main/res/layout/activity_login.xml" value="0.1796875" />
         <entry key="..\:/Users/Pckotlin/AndroidStudioProjects/Dogedex/app/src/main/res/layout/activity_main.xml" value="0.165625" />
         <entry key="..\:/Users/Pckotlin/AndroidStudioProjects/Dogedex/app/src/main/res/layout/dog_list_item.xml" value="0.1796875" />
         <entry key="..\:/kotlin/Dogedex/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
-        <entry key="..\:/kotlin/Dogedex/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/kotlin/Dogedex/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/kotlin/Dogedex/app/src/main/res/layout/activity_settings.xml" value="0.22407407407407406" />
         <entry key="..\:/kotlin/Dogedex/app/src/main/res/layout/fragment_login.xml" value="0.27291666666666664" />
         <entry key="..\:/kotlin/Dogedex/app/src/main/res/layout/fragment_sign_up.xml" value="0.27291666666666664" />
       </map>

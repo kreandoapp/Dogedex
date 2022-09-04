@@ -14,6 +14,7 @@ import com.example.dogedex.R
 import com.example.dogedex.api.ApiResponseStatus
 import com.example.dogedex.databinding.ActivityLoginBinding
 import com.example.dogedex.databinding.ActivityMainBinding
+import com.example.dogedex.model.User
 
 class LoginActivity : AppCompatActivity(),LoginFragment.LoginFragmentActions ,SignUpFragment.SignUpFragmentActions{
 
@@ -36,8 +37,9 @@ class LoginActivity : AppCompatActivity(),LoginFragment.LoginFragmentActions ,Si
                 is ApiResponseStatus.Success -> binding.loadingWheel.visibility = View.GONE
             }
         }
-        viewModel.user.observe(this){
-            if(it != null){
+        viewModel.user.observe(this){ user ->
+            if(user != null){
+                User.setLoggedInUser(this,user)
                 startMainactivity()
             }
         }
@@ -46,6 +48,7 @@ class LoginActivity : AppCompatActivity(),LoginFragment.LoginFragmentActions ,Si
 
     private fun startMainactivity() {
         startActivity(Intent(this,MainActivity::class.java))
+        finish()
     }
 
     private fun showErrorDialog(messageId:Int){
@@ -62,6 +65,11 @@ class LoginActivity : AppCompatActivity(),LoginFragment.LoginFragmentActions ,Si
     override fun onregisterButonClick() {
         findNavController(R.id.nav_host_fragment).
         navigate(LoginFragmentDirections.actionLoginFragmentToSignUpFragment())
+    }
+
+    override fun onLoginUpFieldsValidate(email: String, password: String) {
+        viewModel.login(email,password)
+
     }
 
     override fun onSignUpFieldsValidate(

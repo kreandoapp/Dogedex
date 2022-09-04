@@ -19,4 +19,8 @@
     <string name="error_sign_in">Error signing in</string>
     <string name="user_already_exists">User already exist</string>
     <string name="uknown_error">Error uknow</string>
+    <string name="wrong__user_or_password">Wrong user or password</string>
+    <string name="this_is_a_boton">this is a boton</string>
+    <string name="Logout">Logout</string>
+    <string name="error_adding_dog">There was an error dog</string>
 </resources>
